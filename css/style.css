@@ -1,0 +1,225 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+body {
+  font-family: "Google Sans Flex", sans-serif;
+  background-color: #f4f4f4;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Navbar */
+.navbar {
+  background-color: #282728;
+  color: #fff;
+  padding: 20px 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.navbar .navbar-nav {
+  margin-left: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.navbar .navbar-nav a {
+  color: #fff;
+  text-align: center;
+}
+
+.navbar .navbar-nav a:hover {
+  color: #9a9c9d;
+}
+
+.navbar .navbar-nav a::after {
+  content: "";
+  display: block;
+  padding-bottom: 0.5rem;
+  border-bottom: 0.1rem solid #9a9c9d;
+  transform: scaleX(0);
+}
+
+.navbar .navbar-nav a:hover::after {
+  transform: scaleX(0.5);
+  transition: transform 0.3s linear;
+}
+
+.button-navbar {
+  background-color: #5cb85c;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  cursor: pointer;
+  border-radius: 4px;
+  margin-right: 1.5rem;
+}
+
+.button-navbar:hover {
+  background-color: #4cae4c;
+}
+.button-navbar a {
+  color: #fff;
+  align-items: center;
+}
+
+/* Box Register and Login */
+
+/* Alert Box */
+.alert-danger {
+  background-color: #f2dede;
+  color: #a94442;
+  padding: 10px;
+  border: 1px solid #ebccd1;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 14px;
+  text-align: center;
+}
+
+.container {
+  margin: auto;
+  overflow: hidden;
+  padding: 35px 0px;
+  background: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Box Login, Register, Edit, and Create */
+.container.login,
+.container.register,
+.container.edit,
+.container.create {
+  text-align: center;
+  width: 26%;
+}
+
+/* Box Dashboard */
+.container.dashboard {
+  width: 80%;
+  letter-spacing: 1px;
+  margin-top: 1.8rem;
+}
+
+/* Box Data */
+.container.data {
+  width: 75%;
+  margin-top: 1.8rem;
+}
+
+.container.dashboard,
+.container.data {
+  padding: 35px;
+}
+
+/* Login and Register */
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Form Styles */
+form label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  text-align: left;
+  margin-left: 25%;
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="password"] {
+  width: 50%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+form input[type="submit"] {
+  width: 50%;
+  padding: 5px 10px;
+  background: #5cb85c;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+form input[type="submit"]:hover {
+  background: #4cae4c;
+}
+
+.input-button button {
+  width: 50%;
+  display: inline-block;
+  padding: 10px 15px;
+  background-color: #123499;
+  color: #fff;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+.input-button button:hover {
+  background-color: #051650;
+}
+
+.button-group {
+  text-align: center;
+  margin-top: 15px;
+}
+.button-group a {
+  color: #123499;
+}
+.button-group a:hover {
+  text-decoration: underline;
+}
+
+/* Table Styles */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+table,
+th,
+td {
+  border: 1px solid #ddd;
+}
+th,
+td {
+  padding: 12px;
+  text-align: left;
+}
+th {
+  background-color: #051650;
+  color: #fff;
+}
+tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+tr:hover {
+  background-color: #f1f1f1;
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 10px;
+  background-color: #282728;
+  color: #fff;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
