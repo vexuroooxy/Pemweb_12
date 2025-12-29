@@ -16,11 +16,11 @@ if (isset($_GET['id'])){
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $id = $_POST['id'];
     $name = htmlspecialchars($_POST['name']);
+    $username = htmlspecialchars($_POST['username']);
     $email = htmlspecialchars($_POST['email']);
     $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
-    
-    $query = "UPDATE diaz_tbtugas12 SET name='$name', email='$email', password='$password' WHERE id='$id'";
 
+    $query = "UPDATE diaz_tbtugas12 SET name='$name', username='$username', email='$email', password='$password' WHERE id='$id'";
     if (mysqli_query($koneksi, $query)) {
         echo "<script>alert('Data berhasil diupdate'); window.location.href='dashboard.php';</script>";
     } else {

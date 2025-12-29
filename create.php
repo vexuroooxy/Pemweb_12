@@ -6,11 +6,11 @@ $users = mysqli_fetch_all($result, MYSQLI_ASSOC);
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $name = htmlspecialchars($_POST['name']);
+    $username = htmlspecialchars($_POST['username']);
     $email = htmlspecialchars($_POST['email']);
     $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
 
-    $insertQuery = "INSERT INTO diaz_tbtugas12 (name, email, password) VALUES ('$name', '$email', '$password')";
-
+    $insertQuery = "INSERT INTO diaz_tbtugas12 (name, username, email, password) VALUES ('$name', '$username', '$email', '$password')";
     if (mysqli_query($koneksi, $insertQuery)) {
         echo "<script>alert('User created successfully'); window.location.href='data.php';</script>";
     } else {
